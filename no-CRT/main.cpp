@@ -3,7 +3,7 @@
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
     if (AllocConsole()) {
-        constexpr wchar_t message[]{ L"Hello world! but without CRT :)" };
+        constexpr wchar_t message[]{ L"Hello world! but without CRT :)\nPress enter to exit..." };
         WriteConsoleW(GetStdHandle(STD_OUTPUT_HANDLE), message, sizeof(message) / sizeof(wchar_t) - 1, nullptr, nullptr);
 
         auto input{ L'\0' };
